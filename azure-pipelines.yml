@@ -39,6 +39,6 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'apply'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/todo_infra'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/todoapp_infra'
     environmentServiceNameAzureRM: 'todo_service'
     commandOptions: '-auto-approve'
