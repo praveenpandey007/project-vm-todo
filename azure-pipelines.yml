@@ -33,3 +33,10 @@ steps:
     command: 'plan'
     environmentServiceNameAzureRM: 'todo_service' 
     workingDirectory: '$(System.DefaultWorkingDirectory)/todoapp_infra'
+
+- task: TerraformTask@5
+  inputs:
+    provider: 'azurerm'
+    command: 'apply'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/todo_infra'
+    environmentServiceNameAzureRM: 'todo_service'
