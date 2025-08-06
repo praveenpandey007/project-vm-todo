@@ -31,4 +31,5 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'plan'
+    environmentServiceNameAzureRM: 'todo_service' 
     workingDirectory: '$(System.DefaultWorkingDirectory)/todoapp_infra'
