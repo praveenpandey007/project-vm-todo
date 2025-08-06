@@ -35,8 +35,10 @@ steps:
     workingDirectory: '$(System.DefaultWorkingDirectory)/todoapp_infra'
 
 - task: TerraformTask@5
+  displayName: Terraform Apply
   inputs:
     provider: 'azurerm'
     command: 'apply'
     workingDirectory: '$(System.DefaultWorkingDirectory)/todo_infra'
     environmentServiceNameAzureRM: 'todo_service'
+    commandOptions: '-auto-approve'
