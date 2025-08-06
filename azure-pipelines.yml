@@ -13,7 +13,7 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/todoapp'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/todoapp_infra'
     backendServiceArm: 'todo_service'
     backendAzureRmStorageAccountName: 'praveenstg'
     backendAzureRmContainerName: 'praveencont'
@@ -24,11 +24,11 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'validate'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/todoapp'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/todoapp_infra'
 
 - task: TerraformTask@5
   displayName: Terraform Plan
   inputs:
     provider: 'azurerm'
     command: 'plan'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/todoapp'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/todoapp_infra'
