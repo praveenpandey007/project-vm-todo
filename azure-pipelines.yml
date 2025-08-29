@@ -1,6 +1,6 @@
 trigger: none
 
-pool: praveenagentpool
+pool: gtm-pool
 
 steps:
 
