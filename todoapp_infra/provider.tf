@@ -6,14 +6,14 @@ terraform {
     }
   }
   backend "azurerm" {
-    storage_account_name = "praveenstg"
-    resource_group_name = "praveen-rg12"
+    storage_account_name = "praveenpandey07stg"
+    resource_group_name = "praveenpandey07rg"
     container_name = "praveencont"
     key = "p.tfstate"
   }
 }
 
 provider "azurerm" {
-  subscription_id = "bcf304d8-21b8-4358-9c77-54b5dd26f938"
+  subscription_id = "ecf1c36f-8eba-469e-841f-a595c299e914"
   features {}
 }
